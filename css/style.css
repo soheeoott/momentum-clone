@@ -1,10 +1,1 @@
 body {background-color: beige;}
-
-h1 {
-    color: #344953;
-    transition: all 0.3s ease-in-out;
-    
-}
-
-.btn {cursor: pointer;}
-.clicked {color: #7f8c8d;}
