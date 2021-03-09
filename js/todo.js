@@ -36,8 +36,8 @@ function paintToDo(text) { // 화면(HTML)에 출력
     // const newId = toDosList.length + 1; // id 중복현상 발생
     // const newId = idNumbering++; // 새로운 to do가 생성될 때마다 증가, 삭제했을 때는 변하지 않음
     // 마지막 요소 값 비교
-    const newId = (toDoList.lastElementChild === null ? 1 : parseInt(toDoList.lastElementChild.id) + 1); // 2번째 요소를 삭제 후 새로운 내용을 넣었을 경우 [1, 3, 4] 로 정렬 됨
-
+    // const newId = (toDoList.lastElementChild === null ? 1 : parseInt(toDoList.lastElementChild.id) + 1); // 2번째 요소를 삭제 후 새로운 내용을 넣었을 경우 [1, 3, 4] 로 정렬 됨
+    const newId = Date.now(); // 임의의 id 값
     const li = document.createElement("li"); // li 생성
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
