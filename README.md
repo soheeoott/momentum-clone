@@ -4,5 +4,6 @@
 
 21-03-10
 - [x] toDo-List 목록 생성
+- [X] localStorage 에 ToDo-List 목록 저장
 
 https://soheeoott.github.io/momentum-clone/
