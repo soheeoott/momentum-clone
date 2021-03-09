@@ -1,1 +1,6 @@
 body {background-color: beige;}
+
+.form,
+.greetings {display:none;}
+
+.showing {display:block;}
