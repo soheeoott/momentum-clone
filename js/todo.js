@@ -10,7 +10,7 @@ let toDosList = []; // 목록으로 저장
 
 // parentElement = 부모 노드가 없을 때 null 을 리턴하지만, 
 // parentNode = Document node 를 리턴
-function deleteToDo(event) {
+function deleteToDo(event){
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
@@ -23,7 +23,7 @@ function deleteToDo(event) {
     saveToDos();
 }
 
-function saveToDos() { // localStorage에 목록 저장
+function saveToDos(){ // localStorage에 목록 저장
     // local storage 에는 자바스크립트의 data 를 저장할 수 없음 → 오직 문자열만 저장
     // JSON : 데이터를 전달할 때 자바스크립트가 작업을 수행할 수 있도록 문자열 또는 객체로 바꿔주는 기능
     // 객체 → 문자열
@@ -31,7 +31,7 @@ function saveToDos() { // localStorage에 목록 저장
     localStorage.setItem(TODOS_LS, JSON.stringify(toDosList)); // JSON.stringify() : 객체 → 문자열로 변환
 }
 
-function paintToDo(text) { // 화면(HTML)에 출력
+function paintToDo(text){ // 화면(HTML)에 출력
     // console.log(text); // check
     // const newId = toDosList.length + 1; // id 중복현상 발생
     // const newId = idNumbering++; // 새로운 to do가 생성될 때마다 증가, 삭제했을 때는 변하지 않음
@@ -59,7 +59,7 @@ function paintToDo(text) { // 화면(HTML)에 출력
     saveToDos();
 }
 
-function handleToDoSubmit(event) { // submit 이벤트 처리 
+function handleToDoSubmit(event){ // submit 이벤트 처리 
     event.preventDefault();
 
     if(toDoInput.value !== ""){ // 문자열을 입력
@@ -71,11 +71,11 @@ function handleToDoSubmit(event) { // submit 이벤트 처리
     }
 }
 
-function toDoForEach(toDo) { // forEach 함수 수행
+function toDoForEach(toDo){ // forEach 함수 수행
     paintToDo(toDo.text);
 }
 
-function loadToDos() { // 저장되어 있는 목록의 값 불러오기
+function loadToDos(){ // 저장되어 있는 목록의 값 불러오기
     const loadedToDos = localStorage.getItem(TODOS_LS); // localStorage string
     if(loadedToDos !== null) {
         const parsedToDos = JSON.parse(loadedToDos); // string → object
@@ -83,7 +83,7 @@ function loadToDos() { // 저장되어 있는 목록의 값 불러오기
     }
 }
 
-function init() {
+function init(){
     loadToDos();
     toDoForm.addEventListener("submit", handleToDoSubmit);
 }

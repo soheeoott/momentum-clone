@@ -8,5 +8,6 @@
 - [x] toDo 삭제 후 localStorage 에 반영
 - [ ] 삭제 시 id 값 재정렬
 - [x] 임의로 배경 이미지 바꾸기 
+- [x] navigator API를 이용하여 위도와 경도값 가져오기
 
 https://soheeoott.github.io/momentum-clone/
