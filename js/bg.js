@@ -12,7 +12,7 @@ function handleImgLoad(image){ // load 이벤트 수행
 
 function paintImg(imgNum){
     const image = new Image(); // = document.createElement("img")
-    image.src = `/img/${imgNum + 1}.jpg`; // +1 = Math.random() 함수가 0 을 줄 수도 있기 때문에
+    image.src = `img/${imgNum + 1}.jpg`; // +1 = Math.random() 함수가 0 을 줄 수도 있기 때문에
     image.addEventListener("load", handleImgLoad(image));
 }
 
